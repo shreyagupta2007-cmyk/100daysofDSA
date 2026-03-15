@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[100];
+    int l;
+    printf("Enter a string:");
+    scanf("%s", &s);
+    l=strlen(s);
+    int left=0,right=l-1;
+    while(left<right)
+    {
+        char temp=s[left];
+        s[left]=s[right];
+        s[right]=temp;
+        left++;
+        right--;    
+    }
+    printf("Reversed form:%s", s);
+    return 0;
+}
